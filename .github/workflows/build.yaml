@@ -25,15 +25,9 @@ jobs:
           chmod +x gradlew
           ./gradlew assemble
           
-      - name: Upload Release APK
+      - name: Upload All APK
         uses: actions/upload-artifact@v2
         with:
-          name: my-build-apk_Release
-          path: ./**/*.apk
-          
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-build-apk_Debug
+          name: my-build-apk_All
           path: ./**/*.apk
 
